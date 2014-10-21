@@ -14,7 +14,7 @@ public class UniqueCharacters {
 
         hasUniqueCharacters_NoDataStructures("abcd");
         hasUniqueCharacters_NoDataStructures("aaaa");
-        hasUniqueCharacters_NoDataStructures("abcb");
+        hasUniqueCharacters_NoDataStructures("abcdefghijklmnopqrstuvwxyx");
     }
 
     private static boolean hasUniqueCharacters(String str) {
