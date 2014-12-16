@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by russellb337 on 11/10/14.
  *
- * Write a function that takes an array of integers, and a target integer. The function should return
+ * Write a function that takes an array of unique integers, and a target integer. The function should return
  * a list of tuples of values in the array that add up to the target integer.
  *
  * For example: [0,1,2,3,4,5], 5 -> (0, 5), (1,4), (2,3), (3,2), (4,1), (5,0)
@@ -14,9 +14,9 @@ import java.util.*;
  */
 public class TargetSumTuples {
 
-    private static Set<Tuple<Integer, Integer>> targetTuples(int[] array, int targetSum) {
+    private static List<Tuple<Integer, Integer>> targetTuples(int[] array, int targetSum) {
 
-        Set<Tuple<Integer, Integer>> results = new HashSet<>();
+        List<Tuple<Integer, Integer>> results = new ArrayList<>();
         Set<Integer> numbersAlreadySeen = new HashSet<>();
 
         for (int i = 0; i < array.length; i++) {
@@ -38,7 +38,7 @@ public class TargetSumTuples {
 
     public static void main(String[] args) {
 
-        Set<Tuple<Integer, Integer>> tuples = targetTuples(new int[]{0, 1, 2, 3, 4, 5, -5, 10}, 5);
+        List<Tuple<Integer, Integer>> tuples = targetTuples(new int[]{0, 1, 2, 3, 4, 5,5, -5, 10}, 5);
         for (Tuple<Integer, Integer> tuple : tuples) {
             System.out.println(tuple);
         }

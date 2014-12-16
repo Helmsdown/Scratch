@@ -20,7 +20,6 @@ public class EscapeWhitespace {
 
         for (int i = trueLength-1; i > 0; i--) {
             if(chars[i] == ' ') {
-
                 chars[writePosition] = '0';
                 chars[writePosition-1] = '2';
                 chars[writePosition-2] = '%';
